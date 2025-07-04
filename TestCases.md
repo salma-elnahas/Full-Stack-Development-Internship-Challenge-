@@ -18,14 +18,12 @@ Total package weight 1.1kg
 ** Checkout receipt **
 2x Cheese    200 EGP
 1x Biscuits    150 EGP
-----------------------
 Total Amount: 350 EGP
 Shipping Fee: 30 EGP
 Total Amount: 380 EGP
 
 
------------------------------------
-Test Case 2 :
+ Test Case 2 :
  ExpirableProduct expiredCheese = new ExpirableProduct("Cheese", 200.0, 1, LocalDate.of(2022, 1, 1));
 Customer customer = new Customer("Mona", 1000.0);
 Cart cart = new Cart();
@@ -36,8 +34,7 @@ receipt.checkout(customer, cart);
 CONSOLE OUTPUT:
  Exception in thread "main" java.lang.RuntimeException: Product expired: Cheese
 
-----------------------------------
-Test Case 3 :
+ Test Case 3 :
  ShippableProduct tv = new ShippableProduct("TV", 1500.0, 1, 2000);
 Customer customer = new Customer("Sara", 100.0);  
 Cart cart = new Cart();
@@ -49,8 +46,7 @@ CONSOLE OUTPUT:
  Exception in thread "main" java.lang.RuntimeException: Insufficient balance to complete checkout. Total: 1554.54, Balance: 
 100.0
 
-----------------------------------
-Test Case 4 :
+ Test Case 4 :
 Customer customer = new Customer("EmptyCartUser", 5000.0);
 Cart cart = new Cart(); // Empty
 CheckoutService receipt = new CheckoutService();
@@ -88,7 +84,7 @@ Total package weight 0.8kg
 ** Checkout receipt **
 2x Cheese    200 EGP
 1x Biscuits    150 EGP
-----------------------
+ 
 Total Amount: 350 EGP
 Shipping Fee: 22 EGP
 Total Amount: 372 EGP
